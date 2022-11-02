@@ -1,0 +1,40 @@
+<div>
+
+    <mat-spinner *ngIf="!characterToShow"></mat-spinner>
+    <div *ngIf="characterToShow">
+      
+        <p>ID: {{characterToShow.id}}</p>
+        <p>Name: {{characterToShow.name}}</p>
+        <p>Status: {{characterToShow.status}}</p>
+        <p>Species: {{characterToShow.species}}</p>
+        <p>Type: {{characterToShow.type}}</p>
+        <p>Gender: {{characterToShow.gender}}</p>
+        <p>origin: {{characterToShow.origin.name}} </p>
+        <hr>
+        <img [src]="characterToShow.image">
+        <hr>
+        <button class="buttonAcction" mat-button [routerLink]="characterToShow.url">ingresa a la URL</button>
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                       Episodios
+                    </mat-panel-title>
+                  
+                </mat-expansion-panel-header>
+                <div class="scroll">
+                <p *ngFor="let conten of characterToShow.episode">{{conten}}</p>
+            </div>
+            </mat-expansion-panel>
+
+        </mat-accordion>
+
+        <p>{{characterToShow.created}}</p>
+
+    </div>
+
+</div>
+<div>
+
+
+</div>

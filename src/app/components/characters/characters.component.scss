@@ -1,0 +1,22 @@
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .grid{
+
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: repeat(auto-fill,
+     minmax(min(100%, 25rem), 1fr));
+
+  }
+
+  .button-row {
+    display: table-cell;
+    width: 490px;
+  }
+
+  
