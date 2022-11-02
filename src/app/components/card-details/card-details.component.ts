@@ -28,10 +28,10 @@ export class CardDetailsComponent implements OnInit, OnChanges{
   constructor(
     private _rickAndMortyService: RickAndMortyService,
     private route: ActivatedRoute,
+    public dialogRef: MatDialogRef<CardDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-    
-
   ) {
+    dialogRef: MatDialogRef<CardDetailsComponent>
 
   }
   
@@ -60,7 +60,11 @@ ngOnChanges(): void {
         }
       );
   }
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
+
 
 /*
 this._rickAndMortyService.getSingleSharacter(this.query)
